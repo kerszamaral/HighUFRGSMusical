@@ -1,8 +1,8 @@
-package interfaceGrafica;
+package main.interfaceGrafica;
 
 import java.util.ArrayList;
-import implementacao.Tecla;
-import programaPrincipal.ProgramaPrincipal;
+import main.implementacao.Tecla;
+import main.programaPrincipal.ProgramaPrincipal;
 
 import com.raylib.Jaylib;
 import com.raylib.Jaylib.Vector2;

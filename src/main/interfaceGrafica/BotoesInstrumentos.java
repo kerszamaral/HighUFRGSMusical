@@ -1,9 +1,9 @@
-package interfaceGrafica;
+package main.interfaceGrafica;
 
 import java.util.ArrayList;
 
 import com.raylib.Jaylib.Vector2;
-import programaPrincipal.ProgramaPrincipal;
+import main.programaPrincipal.ProgramaPrincipal;
 
 public class BotoesInstrumentos {
     private ArrayList<BotaoInstrumento> botoesInstrumentos;

@@ -1,7 +1,7 @@
 package tests;
 
 import static org.junit.Assert.*;
-import implementacao.Nota;
+import main.implementacao.Nota;
 import org.junit.Test;
 
 public class NotaTests {

@@ -1,4 +1,4 @@
-package interfaceGrafica;
+package main.interfaceGrafica;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,8 +7,8 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 import com.raylib.Jaylib;
-import implementacao.*;
-import programaPrincipal.ProgramaPrincipal;
+import main.implementacao.*;
+import main.programaPrincipal.ProgramaPrincipal;
 
 public class TecladoInterfaceGrafica {
 

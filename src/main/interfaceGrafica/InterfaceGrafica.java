@@ -1,6 +1,6 @@
-package interfaceGrafica;
+package main.interfaceGrafica;
 
-import implementacao.*;
+import main.implementacao.*;
 
 import com.raylib.Jaylib;
 import java.nio.IntBuffer;

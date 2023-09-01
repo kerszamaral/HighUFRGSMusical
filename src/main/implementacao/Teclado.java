@@ -1,4 +1,4 @@
-package implementacao;
+package main.implementacao;
 
 import com.raylib.Jaylib;
 import java.util.ArrayList;

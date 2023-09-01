@@ -1,4 +1,4 @@
-package implementacao;
+package main.implementacao;
 
 public class Tecla {
     

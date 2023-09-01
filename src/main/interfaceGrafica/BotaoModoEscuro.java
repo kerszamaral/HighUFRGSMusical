@@ -1,8 +1,8 @@
-package interfaceGrafica;
+package main.interfaceGrafica;
 
 import com.raylib.Jaylib;
 
-import programaPrincipal.ProgramaPrincipal;
+import main.programaPrincipal.ProgramaPrincipal;
 
 import java.util.Calendar;
 

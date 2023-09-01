@@ -1,7 +1,7 @@
-package programaPrincipal;
+package main.programaPrincipal;
 
-import implementacao.*;
-import interfaceGrafica.*;
+import main.implementacao.*;
+import main.interfaceGrafica.*;
 import com.raylib.Jaylib;
 import java.util.ArrayList;
 

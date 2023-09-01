@@ -1,6 +1,6 @@
 package tests;
 
-import implementacao.Tecla;
+import main.implementacao.Tecla;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
