@@ -11,15 +11,20 @@ public abstract class Instrumento {
     protected HashMap<Tecla, Nota> notas;
     protected ArrayList<Tecla> teclasFrameAnterior;
     protected boolean estaTocando;
- 
+
     public Instrumento(String nomeInstrumento) {
+        notas = LoadNotas(nomeInstrumento);
+        teclasFrameAnterior = new ArrayList<Tecla>();
+    }
+
+    protected HashMap<Tecla, Nota> LoadNotas(String nomeInstrumento) {
+        HashMap<Tecla, Nota> notas = new HashMap<Tecla, Nota>();
 
         try {
             File arquivoMapNotas = new File("./assets/mapeamento_" + nomeInstrumento + ".txt"); // arquivo texto de
                                                                                                 // mapeamento de notas
             Scanner leitorLinha = new Scanner(arquivoMapNotas);
-            notas = new HashMap<Tecla, Nota>();
-            teclasFrameAnterior = new ArrayList<Tecla>();
+
 
             // --------------------------------------------------------------------------------------------------
             // percorre os arquivos de textos e associa as notas as respectivas teclas do
@@ -43,6 +48,7 @@ public abstract class Instrumento {
             e.printStackTrace();
         }
 
+        return notas;
     }
 
     public abstract boolean tocar(ArrayList<Tecla> teclas); 

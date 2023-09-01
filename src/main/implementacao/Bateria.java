@@ -1,10 +1,6 @@
 package main.implementacao;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
 
 public class Bateria extends Instrumento{
 
@@ -37,34 +33,8 @@ public class Bateria extends Instrumento{
     }
 
     public Bateria BateriaCopy() {
-        try {
-            File arquivoMapNotas = new File("D:/GitHub/HighUFRGSMusical/assets/mapeamento_bateria.txt"); // arquivo texto de
-                                                                                                // mapeamento de notas
-            Scanner leitorLinha = new Scanner(arquivoMapNotas);
-            notas = new HashMap<Tecla, Nota>();
-            teclasFrameAnterior = new ArrayList<Tecla>();
-
-            // --------------------------------------------------------------------------------------------------
-            // percorre os arquivos de textos e associa as notas as respectivas teclas do
-            // teclado:
-
-            while (leitorLinha.hasNextLine()) {
-                String linhaLida = leitorLinha.nextLine();
-                String[] partes = linhaLida.split("@");
-                Tecla tecla = new Tecla(partes[0].codePointAt(0), false);
-                String nomeNota = partes[1];
-                Nota nota = new Nota(nomeNota, "piano");
-                notas.put(tecla, nota);
-            }
-
-            // ------------------------------------------------------------------------------------------------
-
-            leitorLinha.close();
-
-        } catch (FileNotFoundException e) {
-            System.out.println("Houve um erro na leitura do arquivo de mapeamento das teclas para notas.");
-            e.printStackTrace();
-        }
+        this.notas = LoadNotas("bateria");
+        this.teclasFrameAnterior = new ArrayList<Tecla>();
         return this;
 
     }
