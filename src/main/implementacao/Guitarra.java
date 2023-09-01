@@ -40,7 +40,7 @@ public class Guitarra extends Instrumento {
     }
 
     public Guitarra GuitarraCopy() {
-        this.notas = LoadNotas("guitarra");
+        this.notas = loadNotas("guitarra");
         this.teclasFrameAnterior = new ArrayList<Tecla>();
         return this;
 

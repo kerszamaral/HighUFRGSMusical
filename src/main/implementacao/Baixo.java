@@ -39,7 +39,7 @@ public class Baixo extends Instrumento {
 
 
     public Baixo baixoCopy() {
-        this.notas = LoadNotas("baixo");
+        this.notas = loadNotas("baixo");
         this.teclasFrameAnterior = new ArrayList<Tecla>();
         return this;
     }

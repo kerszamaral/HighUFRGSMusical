@@ -33,7 +33,7 @@ public class Piano extends Instrumento {
     }
 
     public Piano PianoCopy() {
-        this.notas = LoadNotas("piano");
+        this.notas = loadNotas("piano");
         this.teclasFrameAnterior = new ArrayList<Tecla>();
         return this;
 

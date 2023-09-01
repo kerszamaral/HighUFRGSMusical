@@ -13,11 +13,11 @@ public abstract class Instrumento {
     protected boolean estaTocando;
 
     public Instrumento(String nomeInstrumento) {
-        notas = LoadNotas(nomeInstrumento);
+        notas = loadNotas(nomeInstrumento);
         teclasFrameAnterior = new ArrayList<Tecla>();
     }
 
-    protected HashMap<Tecla, Nota> LoadNotas(String nomeInstrumento) {
+    protected HashMap<Tecla, Nota> loadNotas(String nomeInstrumento) {
         HashMap<Tecla, Nota> notas = new HashMap<Tecla, Nota>();
 
         try {

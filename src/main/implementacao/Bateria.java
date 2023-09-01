@@ -33,7 +33,7 @@ public class Bateria extends Instrumento{
     }
 
     public Bateria BateriaCopy() {
-        this.notas = LoadNotas("bateria");
+        this.notas = loadNotas("bateria");
         this.teclasFrameAnterior = new ArrayList<Tecla>();
         return this;
 
