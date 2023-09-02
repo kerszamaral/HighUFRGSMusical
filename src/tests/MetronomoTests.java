@@ -41,7 +41,7 @@ public class MetronomoTests {
 
     @Test
     public void setBpmTest2() {
-        assertTrue(metronomo.setBpm(-1));
+        assertFalse(metronomo.setBpm(-1));
         assertEquals(DEFAULT_BPM, metronomo.getBpm());
     }
 
@@ -76,7 +76,7 @@ public class MetronomoTests {
     public void tocarTest2() {
         metronomo.setBpm(60);
         metronomo.começar();
-        tocar1Second();
+        tocarNTimes(ProgramaPrincipal.TARGET_FPS - 1);
         assertTrue(metronomo.update());
     }
 
