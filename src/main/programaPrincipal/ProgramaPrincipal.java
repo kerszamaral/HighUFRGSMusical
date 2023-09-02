@@ -7,6 +7,7 @@ import java.util.ArrayList;
 
 public class ProgramaPrincipal {
 
+    public static final int TARGET_FPS = 240;
     public static final float ESCALA = 0.35f;
     private static final Piano piano = new Piano();
     private static final Guitarra guitarra = new Guitarra();
@@ -36,7 +37,7 @@ public class ProgramaPrincipal {
 
     private static void inicializaJanela() {
         Jaylib.InitWindow((int)(4800 * ESCALA), (int)(2400 * ESCALA), "High UFRGS Musical - Road to INFinity");
-        Jaylib.SetTargetFPS(240);
+        Jaylib.SetTargetFPS(TARGET_FPS);
         Jaylib.InitAudioDevice();
         Jaylib.SetMasterVolume(0.5f);
     }

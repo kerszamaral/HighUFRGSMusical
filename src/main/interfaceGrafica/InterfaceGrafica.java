@@ -12,6 +12,7 @@ public class InterfaceGrafica {
     private SliderVolume sliderVolume;
     private BotaoModoEscuro botaoModoEscuro;
     private TecladoInterfaceGrafica tecladoInterfaceGrafica;
+    private SliderMetronomo sliderMetronomo;
     private Jaylib.Texture2D TEXTURA_FUNDO_CLARO;
     private Jaylib.Texture2D TEXTURA_FUNDO_ESCURO;
     private boolean modoEscuro;
@@ -25,6 +26,7 @@ public class InterfaceGrafica {
         this.tecladoInterfaceGrafica = new TecladoInterfaceGrafica("piano");
         this.TEXTURA_FUNDO_CLARO = Jaylib.LoadTexture("./assets/ui/modo_claro/background.png");
         this.TEXTURA_FUNDO_ESCURO = Jaylib.LoadTexture("./assets/ui/modo_escuro/background.png");
+        this.sliderMetronomo = new SliderMetronomo();
 
         this.modoEscuro = botaoModoEscuro.estaModoEscuro();
 
@@ -71,6 +73,9 @@ public class InterfaceGrafica {
         tecladoInterfaceGrafica.desenha(modoEscuro, teclas, this.getInstrumento());
         botoesInstrumentos.desenha(this.modoEscuro);
         sliderVolume.desenha(modoEscuro, corTexto);
+
+        sliderMetronomo.alterouBPM(teclas);
+        sliderMetronomo.desenha(modoEscuro);
     }
 
 }
