@@ -7,8 +7,8 @@ public class Metronomo {
     private Nota high;
     private int bpm;
     private int tempo;
+    private int contagem;
     private boolean estaTocando;
-    private boolean tocarHigh;
 
     public Metronomo(int bpm) {
         this.low = new Nota("low", "metronomo");
@@ -16,6 +16,7 @@ public class Metronomo {
         this.bpm = bpm;
         this.tempo = 0;
         this.estaTocando = false;
+        this.contagem = 0;
     }
 
     public boolean update() {
@@ -23,19 +24,18 @@ public class Metronomo {
             return false;
         }
 
-        final int modulo = ProgramaPrincipal.TARGET_FPS * 60 / this.bpm;
-        this.tempo = (tempo + 1) % modulo;
+        final int MODULO = ProgramaPrincipal.TARGET_FPS * 60 / this.bpm;
+        this.tempo = (tempo + 1) % MODULO;
         if (this.tempo != 0) {
             return false;
         }
 
-        this.tocarHigh = !this.tocarHigh;
-
-        if (this.tocarHigh) {
+        if (this.contagem == 0) {
             this.high.tocarNota();
         } else {
             this.low.tocarNota();
         }
+        this.contagem = (this.contagem + 1) % 4;
 
         return true;
     }
@@ -43,7 +43,7 @@ public class Metronomo {
     public void começar() {
         this.tempo = 0;
         this.estaTocando = true;
-        this.tocarHigh = false;
+        this.contagem = 0;
     }
 
     public void parar() {

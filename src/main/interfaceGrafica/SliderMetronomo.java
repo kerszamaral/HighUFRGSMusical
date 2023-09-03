@@ -80,9 +80,9 @@ public class SliderMetronomo {
         final Jaylib.Texture2D bola = modoEscuro ? bolaEscuro : bolaClaro;
         desenhaTextura(bola, posicaoBola);
 
-        final String texto = "Velocidade " + (int) (bpmAtual);
+        final String texto = (int) (bpmAtual) + " BPM";
         final Jaylib.Color corTexto = metronomo.estaTocando() ? Jaylib.GREEN : Jaylib.RED;
-        final Vector2 posicaoTexto = Vector2Escalado(offsetBarraX - 100, offsetBarraY + 1250);
+        final Vector2 posicaoTexto = Vector2Escalado(offsetBarraX - 30, offsetBarraY + 1250);
         desenhaTexto(texto, posicaoTexto, corTexto);
 
         metronomo.update();
